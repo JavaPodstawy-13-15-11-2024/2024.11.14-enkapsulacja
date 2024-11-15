@@ -29,4 +29,12 @@ public class Square {
         this.field = side * side;
         this.circle = side * 4;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!(obj instanceof Square)) {
+            return false;
+        }
+        return this.side == ((Square) obj).side;
+    }
 }
